@@ -85,13 +85,13 @@ class Upload extends CI_Controller
                     $username = $this->ion_auth->user()->row()->first_name;
 
                     $id = $this->ion_auth->user()->row()->id;
-                    $path=base_url() . '/uploads/'.$username . "/";
-                    @mkdir($path,0777);
-                    $filename = $path . date('Y-m-d H:i:s') . "_" . $username . ".csv";
+                    $path="/var/www/html/scripts/Jaccard/Diploma/uploads/";
+                    $download_path = base_url() . "uploads/"   . date('Y-m-d-H-m') . "_" . $username . ".csv";
+                    $filename =$path. date('Y-m-d-H-m') . "_"   . $username . ".csv";
                     file_put_contents($filename,$resstring);
                     $insert = array(
                         'user_id' => $id,
-                        'path' => $filename
+                        'path' => $download_path
                     );
                     $this->db->insert('files', $insert);
                 }
