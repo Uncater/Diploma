@@ -140,7 +140,7 @@ class Upload extends CI_Controller
                 }
                 $resstring = implode(PHP_EOL, $data);
                 $name = date('Y-m-d H:i:s') . ".csv";
-                //force_download($name, $resstring);
+                force_download($name, $resstring);
                 if ($this->ion_auth->logged_in()){
                     $username = $this->ion_auth->user()->row()->first_name;
                     //var_dump($username);
