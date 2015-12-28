@@ -81,5 +81,15 @@ class Jaccard {
 
         return $result;
     }
+    
+     function calculate_h1($url_new = array(), $url_old = array(), $url_new_cut = array(), $url_old_cut = array())
+    {
+        $Jaccard = new Jaccard;
+        $Jaccard -> Jaccard_matrix($url_old_cut, $url_new_cut, 2);
+
+        $result = $Jaccard -> Jaccard_map($url_old,$url_new);
+
+        return $result;
+    }
 
 }
