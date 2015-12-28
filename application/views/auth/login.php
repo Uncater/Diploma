@@ -12,7 +12,7 @@
 
 <div class= "main">
   <div class="field">
-<?php echo form_open("auth/login");?>
+<form method="post" action="<?php echo base_url(); ?>/auth/login">
 
 
 
