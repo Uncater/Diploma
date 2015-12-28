@@ -92,7 +92,7 @@ class Upload extends CI_Controller
                     $this->db->insert('files', $insert);
                 }
                 $name = date('Y-m-d H:i:s') . ".csv";
-                //force_download($name, $resstring);
+                force_download($name, $resstring);
 
 
 
