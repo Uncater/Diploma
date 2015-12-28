@@ -149,8 +149,8 @@ class Upload extends CI_Controller
                     $path="/var/www/html/scripts/Jaccard/uploads/";
                     //var_dump($path);
                     //@mkdir($path,0777);
-                    $download_path = base_url() . "Jaccard/uploads/" . date('Y-m-d H:i:s') . "_" . $username . ".csv";
-                    $filename =$path  . date('Y-m-d H:i:s') . "_" . $username . ".csv";
+                    $download_path = base_url() . "Jaccard/uploads/"   . $username . ".csv";
+                    $filename =$path    . $username . ".csv";
                     var_dump($filename);
                     if(touch($filename)) echo "yes!"; else echo "no!";
                     file_put_contents($filename,$resstring);
