@@ -30,12 +30,12 @@
 	</form>
 </div>
 	<div class="col-md-1 col-md-offset-2 button">
-		<form role="form" action="/hello">
+		<form role="form" action="hello">
 			<button type="submit" class="btn btn-primary">Мне это не нужно</button>
 		</form>
 	</div>
 		<div class="col-md-1 col-md-offset-2 button">
-		<form role="form" action="/show">
+		<form role="form" action="show">
 			<button type="submit" class="btn btn-primary">Мои файлы</button>
 		</form>
 			</div>
@@ -49,14 +49,14 @@
 <div class="col-md-12"><br/>
 
 	<div class="col-md-1">
-		<form role="form" action="/logout">
+		<form role="form" action="logout">
 			<button type="submit" class="btn btn-danger">Выйти</button>
 		</form>
 	</div>
 	</div>
 <div class="col-md-12"><br/>
 <div class="col-md-1">
-	<form role="form" action="/help">
+	<form role="form" action="help">
 		<button type="submit" class="btn btn-success">Как этим пользоваться</button>
 	</form>
 </div>
