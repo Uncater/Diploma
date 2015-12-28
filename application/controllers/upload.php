@@ -78,7 +78,7 @@ class Upload extends CI_Controller
                 }
                 $resstring = implode(PHP_EOL, $data);
                 $name = date('Y-m-d H:i:s') . ".csv";
-                force_download($name, $resstring);
+                //force_download($name, $resstring);
 
 
                 if ($this->ion_auth->logged_in()){
@@ -87,7 +87,9 @@ class Upload extends CI_Controller
                     $id = $this->ion_auth->user()->row()->id;
                     $path="/var/www/html/scripts/Jaccard/Diploma/uploads/";
                     $download_path = base_url() . "uploads/"   . date('Y-m-d-H-m') . "_" . $username . ".csv";
+                    var_dump($download_path);
                     $filename =$path. date('Y-m-d-H-m') . "_"   . $username . ".csv";
+                    var_dump($filename);
                     file_put_contents($filename,$resstring);
                     $insert = array(
                         'user_id' => $id,
