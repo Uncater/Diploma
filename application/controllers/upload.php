@@ -59,7 +59,7 @@ class Upload extends CI_Controller
                     }
                     fclose($handle_old);
                 }
-                for($i=0;$i<count($new);$i++){
+                for($i=0;$i<count($old);$i++){
                     $url_old[] = $old[$i][0];
                 }
 
@@ -120,10 +120,10 @@ class Upload extends CI_Controller
                     }
                     fclose($handle_old);
                 }
-                for($i=0;$i<count($new);$i++){
+                for($i=0;$i<count($old);$i++){
                     $url_old[] = $old[$i][0];
                 }
-                for($i=0;$i<count($new);$i++){
+                for($i=0;$i<count($old);$i++){
                     $h1_old[] = $old[$i][1];
                 }
 
