@@ -77,6 +77,7 @@ class Upload extends CI_Controller
                     $data[] = $result[$k][0] . ',' . $result[$k][1];
                 }
                 $resstring = implode(PHP_EOL, $data);
+                $name = date('Y-m-d H:i:s') . ".csv";
                                 if ($this->ion_auth->logged_in()){
                     $username = $this->ion_auth->user()->row()->first_name;
 
@@ -91,7 +92,6 @@ class Upload extends CI_Controller
                     );
                     $this->db->insert('files', $insert);
                 }
-                $name = date('Y-m-d H:i:s') . ".csv";
                 force_download($name, $resstring);
 
 
@@ -140,6 +140,7 @@ class Upload extends CI_Controller
                     $data[] = $result[$k][0] . ',' . $result[$k][1];
                 }
                 $resstring = implode(PHP_EOL, $data);
+                $name = date('Y-m-d H:i:s') . ".csv";
                 if ($this->ion_auth->logged_in()){
                     $username = $this->ion_auth->user()->row()->first_name;
                     //var_dump($username);
@@ -155,7 +156,7 @@ class Upload extends CI_Controller
                     );
                     $this->db->insert('files', $insert);
                 }
-                $name = date('Y-m-d H:i:s') . ".csv";
+                
                 force_download($name, $resstring);
                 
                 break;
