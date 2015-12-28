@@ -1,4 +1,4 @@
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="<?php echo base_url('css/bootstrap.min.css') ?>" rel="stylesheet">
 <style type="text/css">
       .main {float:left; margin: 1%}
 </style>
