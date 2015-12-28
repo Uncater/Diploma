@@ -19,7 +19,7 @@ class showFiles extends CI_Controller
             $data['result'] = $result;
 //            var_dump($result);
             $this->load->view('files', $data);}
-            else echo "У вас еще нет документов"
+            else echo "У вас еще нет документов";
 //            var_dump($query);
 
         }
