@@ -9,7 +9,7 @@
 <div id="infoMessage"><?php echo $message;?></div>
 <div class="main">
 
-<form method="post" action="<?php echo base_url(); ?>/auth/create_user">
+<form method="post" action="<?php echo base_url(); ?>auth/create_user">
 
       <p>
             <?php echo lang('create_user_fname_label', 'first_name');?> <br />
