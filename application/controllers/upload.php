@@ -132,7 +132,7 @@ class Upload extends CI_Controller
 
 
                 $this->load->library('jaccard');
-                $result = $this->jaccard->calculate($url_new, $url_old, $h1_new, $h1_old);
+                $result = $this->jaccard->calculate_h1($url_new, $url_old, $h1_new, $h1_old);
 
                 $reslen = count($result);
                 for($k=0; $k<$reslen; $k++){
