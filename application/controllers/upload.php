@@ -77,19 +77,13 @@ class Upload extends CI_Controller
                     $data[] = $result[$k][0] . ',' . $result[$k][1];
                 }
                 $resstring = implode(PHP_EOL, $data);
-                $name = date('Y-m-d H:i:s') . ".csv";
-                //force_download($name, $resstring);
-
-
-                if ($this->ion_auth->logged_in()){
+                                if ($this->ion_auth->logged_in()){
                     $username = $this->ion_auth->user()->row()->first_name;
 
                     $id = $this->ion_auth->user()->row()->id;
                     $path="/var/www/html/scripts/Jaccard/Diploma/uploads/";
                     $download_path = base_url() . "uploads/"   . date('Y-m-d-H-m') . "_" . $username . ".csv";
-                    var_dump($download_path);
                     $filename =$path. date('Y-m-d-H-m') . "_"   . $username . ".csv";
-                    var_dump($filename);
                     file_put_contents($filename,$resstring);
                     $insert = array(
                         'user_id' => $id,
@@ -97,6 +91,11 @@ class Upload extends CI_Controller
                     );
                     $this->db->insert('files', $insert);
                 }
+                $name = date('Y-m-d H:i:s') . ".csv";
+                //force_download($name, $resstring);
+
+
+
                 break;
 
 
@@ -141,8 +140,6 @@ class Upload extends CI_Controller
                     $data[] = $result[$k][0] . ',' . $result[$k][1];
                 }
                 $resstring = implode(PHP_EOL, $data);
-                $name = date('Y-m-d H:i:s') . ".csv";
-                force_download($name, $resstring);
                 if ($this->ion_auth->logged_in()){
                     $username = $this->ion_auth->user()->row()->first_name;
                     //var_dump($username);
@@ -158,6 +155,9 @@ class Upload extends CI_Controller
                     );
                     $this->db->insert('files', $insert);
                 }
+                $name = date('Y-m-d H:i:s') . ".csv";
+                force_download($name, $resstring);
+                
                 break;
         }
 
