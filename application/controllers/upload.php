@@ -146,7 +146,7 @@ class Upload extends CI_Controller
                     var_dump($username);
 
                     $id = $this->ion_auth->user()->row()->id;
-                    $path=base_url() . '/uploads/'.$username . "/";
+                    $path=base_url() . 'uploads/'.$username . "/";
                     var_dump($path);
                     @mkdir($path,0777);
                     $filename = $path . date('Y-m-d H:i:s') . "_" . $username . ".csv";
