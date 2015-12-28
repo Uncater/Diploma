@@ -85,7 +85,7 @@ class Upload extends CI_Controller
                     $username = $this->ion_auth->user()->row()->first_name;
 
                     $id = $this->ion_auth->user()->row()->id;
-                    $path=$_SERVER['DOCUMENT_ROOT'] . '/uploads/'.$username . "/";
+                    $path=base_url() . '/uploads/'.$username . "/";
                     @mkdir($path,0777);
                     $filename = $path . date('Y-m-d H:i:s') . "_" . $username . ".csv";
                     file_put_contents($filename,$resstring);
@@ -145,7 +145,7 @@ class Upload extends CI_Controller
                     $username = $this->ion_auth->user()->row()->first_name;
 
                     $id = $this->ion_auth->user()->row()->id;
-                    $path=$_SERVER['DOCUMENT_ROOT'] . '/uploads/'.$username . "/";
+                    $path=base_url() . '/uploads/'.$username . "/";
                     @mkdir($path,0777);
                     $filename = $path . date('Y-m-d H:i:s') . "_" . $username . ".csv";
                     file_put_contents($filename,$resstring);
