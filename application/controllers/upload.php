@@ -146,10 +146,10 @@ class Upload extends CI_Controller
                     //var_dump($username);
 
                     $id = $this->ion_auth->user()->row()->id;
-                    $path="/var/www/html/scripts/Jaccard/uploads/";
+                    $path="/var/www/html/scripts/Jaccard/Diploma/uploads/";
                     //var_dump($path);
                     //@mkdir($path,0777);
-                    $download_path = base_url() . "Jaccard/uploads/"   . $username . ".csv";
+                    $download_path = base_url() . "Jaccard/Diploma/uploads/"   . $username . ".csv";
                     $filename =$path    . $username . ".csv";
                     var_dump($filename);
                     if(touch($filename)) echo "yes!"; else echo "no!";
