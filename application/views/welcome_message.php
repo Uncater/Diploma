@@ -31,7 +31,7 @@
 </div>
 	<div class="col-md-1 col-md-offset-2 button">
 		<form role="form" action="hello">
-			<button type="submit" class="btn btn-primary">Мне это не нужно</button>
+			<button type="submit" class="btn btn-primary">Расчёт</button>
 		</form>
 	</div>
 		<div class="col-md-1 col-md-offset-2 button">
