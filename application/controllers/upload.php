@@ -40,7 +40,7 @@ class Upload extends CI_Controller
                 $old_cutme = strlen($_POST['url_old']);
 
                 if (($handle_new = fopen($_FILES['csv_new']['tmp_name'], "r")) !== FALSE) {
-                    while (($data_new = fgetcsv($handle_new,  ",")) !== FALSE) {
+                    while (($data_new = fgetcsv($handle_new)) !== FALSE) {
                         $new[] = $data_new;
                     }
                     fclose($handle_new);
@@ -54,7 +54,7 @@ class Upload extends CI_Controller
                 }
 
                 if (($handle_old = fopen($_FILES['csv_old']['tmp_name'], "r")) !== FALSE) {
-                    while (($data_old = fgetcsv($handle_old,  ",")) !== FALSE) {
+                    while (($data_old = fgetcsv($handle_old)) !== FALSE) {
                         $old[] = $data_old;
                     }
                     fclose($handle_old);
@@ -100,7 +100,7 @@ class Upload extends CI_Controller
 
 
             case 'option_H1' :   if (($handle_new = fopen($_FILES['csv_new']['tmp_name'], "r")) !== FALSE) {
-                while (($data_new = fgetcsv($handle_new,  ",")) !== FALSE) {
+                while (($data_new = fgetcsv($handle_new)) !== FALSE) {
                     $new[] = $data_new;
                 }
                 fclose($handle_new);
@@ -116,7 +116,7 @@ class Upload extends CI_Controller
 
 
                 if (($handle_old = fopen($_FILES['csv_old']['tmp_name'], "r")) !== FALSE) {
-                    while (($data_old = fgetcsv($handle_old,  ",")) !== FALSE) {
+                    while (($data_old = fgetcsv($handle_old)) !== FALSE) {
                         $old[] = $data_old;
                     }
                     fclose($handle_old);
